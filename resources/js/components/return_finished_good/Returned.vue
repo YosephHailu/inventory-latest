@@ -1,0 +1,216 @@
+<template>
+  <v-form v-model="valid">
+    <v-container>
+      <v-card class="px-5 pb-5">
+        <v-toolbar class="cyan">
+          <v-divider></v-divider>
+          <v-card-title class="white--text">ISSUE ITEM REGISTRATION FORM</v-card-title>
+          <v-divider></v-divider>
+        </v-toolbar>
+        <v-form ref="form" v-model="valid" @submit="handelSubmit" class="pt-4">
+          <v-row>
+            <v-col cols="12" md="3" class="py-0">
+              <v-text-field
+                v-model="issue_item.issue_id"
+                :rules="[ v => !!v || 'Issue number is required', 
+                  v => v >= config.issue_start || 'MIN Issue number IS : ' + config.issue_start,
+                  v => v <= config.issue_end || 'MAX Issue number IS : ' + config.issue_end]"
+                label="Issue id"
+                :messages="'FROM - ' + config.issue_start + ' - TO - ' + config.issue_end"
+                required
+              ></v-text-field>
+            </v-col>
+
+            <v-col cols="12" md="3" class="py-0">
+              <v-select
+                v-model="issue_item.section_id"
+                :items="sections"
+                item-text="name"
+                item-value="id"
+                :rules="[v => !!v || 'Supplier field is required']"
+                label="Item supplier"
+              ></v-select>
+            </v-col>
+
+            <v-col cols="12" md="6" class="py-0">
+              <v-row>
+                <v-col class="py-0">
+                  <v-select menu-props="auto" v-model="issue_item.year" :items="years" label="Year"></v-select>
+                </v-col>
+
+                <v-col class="py-0">
+                  <v-select
+                    menu-props="auto"
+                    item-text="name"
+                    item-value="value"
+                    v-model="issue_item.month"
+                    :items="months"
+                    label="Month"
+                  ></v-select>
+                </v-col>
+
+                <v-col class="py-0">
+                  <v-text-field v-model="issue_item.day" label="Day"></v-text-field>
+                </v-col>
+              </v-row>
+            </v-col>
+
+            <v-col cols="12" md="3" class="py-0">
+              <v-text-field
+                v-model="issue_item.request_no"
+                label="Request number"
+                :rules="[v => !!v || 'Request number is required *']"
+                required
+              ></v-text-field>
+            </v-col>
+
+            <v-col cols="12" md="3" class="py-0">
+              <v-text-field
+                v-model="issue_item.issued_by"
+                :rules="[v => !!v || 'Issued by is required *']"
+                label="Issued by"
+              ></v-text-field>
+            </v-col>
+
+            <v-col cols="12" md="3" class="py-0">
+              <v-text-field v-model="issue_item.prepared_by" label="Prepared by"></v-text-field>
+            </v-col>
+
+            <v-col cols="12" md="3" class="py-0">
+              <v-text-field v-model="issue_item.received_by" label="Received by"></v-text-field>
+            </v-col>
+          </v-row>
+        </v-form>
+
+        <!-- <v-toolbar class="cyan">
+          <v-divider></v-divider>
+          <v-card-title class="white--text">SELECTED ITEMS</v-card-title>
+          <v-divider></v-divider>
+          <AddItem />
+        </v-toolbar>-->
+
+        <div class="text-center mt-3">
+          <v-btn
+            v-if="edit"
+            dark
+            color="cyan accent-6"
+            :loading="btn_loading"
+            rounded
+            @click="handelUpdate"
+          >Save</v-btn>
+
+          <v-btn
+            dark
+            v-else
+            color="cyan accent-6"
+            :loading="btn_loading"
+            rounded
+            @click="handelSubmit"
+          >Save</v-btn>
+        </div>
+      </v-card>
+    </v-container>
+  </v-form>
+</template>
+
+<script>
+import { months } from "../../helper/date";
+import AddItem from "./AddItem";
+export default {
+  components: {
+    AddItem
+  },
+  data: () => ({
+    date_menu: false,
+    edit: false,
+    valid: false,
+    config: {},
+    issue_item: {
+      supplier: {}
+    },
+    btn_loading: false,
+    sections: [],
+    years: [],
+    months
+  }),
+  methods: {
+    handelSubmit() {
+      if (this.$refs.form.validate()) {
+        this.btn_loading = true;
+        let formData = new FormData();
+
+        Object.keys(this.issue_item).forEach(key =>
+          formData.append(key, this.issue_item[key])
+        );
+
+        axios
+          .post("/api/issue_item", formData)
+          .then(response => {
+            this.btn_loading = false;
+            this.$router.push({
+              path: "/issue-good/" + response.data.issue_item.id + "/manage"
+            });
+          })
+          .catch(error => {
+            this.btn_loading = false;
+          });
+      }
+    },
+
+    handelUpdate() {
+      if (this.$refs.form.validate()) {
+        this.btn_loading = true;
+        let formData = new FormData();
+
+        Object.keys(this.issue_item).forEach(key =>
+          formData.append(key, this.issue_item[key])
+        );
+
+        formData.append("_method", "put");
+
+        axios
+          .post("/api/issue_item/" + this.$route.params.id, formData)
+          .then(response => {
+            this.btn_loading = false;
+            this.$router.go(-1);
+          })
+          .catch(error => {
+            this.btn_loading = false;
+          });
+      }
+    },
+
+    fetchGoodReceive() {
+      axios
+        .get("/api/issue_item/" + this.$route.params.id)
+        .then(response => {
+          this.issue_item = response.data.issue_item;
+          this.issue_item.month = this.issue_item.month + 0;
+        })
+        .catch(error => {});
+    },
+
+    fetchOptions() {
+      axios
+        .get("/api/itemIssueOptions")
+        .then(response => {
+          this.sections = response.data.sections;
+          this.config = response.data.config;
+        })
+        .catch(error => {});
+    }
+  },
+  created() {
+    this.years = new Array(2050 - 2000).fill(2000).map((n, i) => n + i);
+    // this.issue_item.year = new Date().getFullYear();
+    // this.issue_item.month = new Date().getMonth() + 1;
+    if (this.$route.params.id) {
+      this.edit = true;
+      this.fetchGoodReceive();
+    } else {
+      this.edit = false;
+    }
+    this.fetchOptions();
+  }
+};
+</script>
