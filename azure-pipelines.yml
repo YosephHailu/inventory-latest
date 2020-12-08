@@ -24,5 +24,10 @@ steps:
 
 - script: composer install --no-interaction --prefer-dist
   displayName: 'composer install'
-
-- task: PublishBuildArtifacts@1
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Microsoft Azure Sponsorship 2 (79a3fac4-7aef-403c-8566-c3ff86d8f8d9)'
+    appType: 'webApp'
+    WebAppName: 'inventory-wa'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
