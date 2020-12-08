@@ -20,6 +20,7 @@
             ]);
             ?>
     </script>
+    //import main js file
     <script src="{{asset(url('js/app.js'))}}"></script>
 </body>
 
