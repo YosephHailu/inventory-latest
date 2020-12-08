@@ -3,7 +3,7 @@
     <v-app-bar dark dense class="blue-grey">
       <v-app-bar-nav-icon @click="toggleSidebar"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>INVENTORY MANAGEMENT-SYSTEM</v-toolbar-title>
+      <v-toolbar-title>INVENTORY MANAGEMENT SYSTEM</v-toolbar-title>
       <v-spacer></v-spacer>
 
       <v-btn v-if="getAuth.logged_in" class="text" text>
