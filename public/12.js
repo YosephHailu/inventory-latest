@@ -102,12 +102,15 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get("/api/finished_good/" + this.$route.params.id).then(function (response) {
+        console.log(response);
         _this.f_g_issued_count = response.data.f_g_issued_count;
         _this.f_g_received_count = response.data.f_g_received_count;
         _this.f_g_issued_price = response.data.f_g_issued_price;
         _this.f_g_received_price = response.data.f_g_received_price;
         _this.finished_good = response.data.finished_good;
-      })["catch"](function (error) {});
+      })["catch"](function (error) {
+        console.log(error.response);
+      });
     }
   },
   watch: {},
@@ -371,7 +374,7 @@ var render = function() {
                         _vm._v(
                           _vm._s(
                             "I.balance : " +
-                              _vm.finished_good.initial_balance.toLocaleString() +
+                              _vm.finished_good.initial_balance +
                               ","
                           )
                         )
@@ -381,7 +384,7 @@ var render = function() {
                         _vm._v(
                           _vm._s(
                             "Beginning balance : " +
-                              _vm.finished_good.beginning_balance.toLocaleString() +
+                              _vm.finished_good.beginning_balance +
                               ","
                           )
                         )
@@ -398,21 +401,13 @@ var render = function() {
                       _vm._v(" "),
                       _c("v-list-item-subtitle", [
                         _vm._v(
-                          _vm._s(
-                            "Quantity : " +
-                              _vm.f_g_received_count.toLocaleString() +
-                              ","
-                          )
+                          _vm._s("Quantity : " + _vm.f_g_received_count + ",")
                         )
                       ]),
                       _vm._v(" "),
                       _c("v-list-item-subtitle", [
                         _vm._v(
-                          _vm._s(
-                            "Price : $" +
-                              _vm.f_g_received_price.toLocaleString() +
-                              ","
-                          )
+                          _vm._s("Price : $" + _vm.f_g_received_price + ",")
                         )
                       ])
                     ],
@@ -427,22 +422,12 @@ var render = function() {
                       _vm._v(" "),
                       _c("v-list-item-subtitle", [
                         _vm._v(
-                          _vm._s(
-                            "Quantity : " +
-                              _vm.f_g_issued_count.toLocaleString() +
-                              ","
-                          )
+                          _vm._s("Quantity : " + _vm.f_g_issued_count + ",")
                         )
                       ]),
                       _vm._v(" "),
                       _c("v-list-item-subtitle", [
-                        _vm._v(
-                          _vm._s(
-                            "Price : $" +
-                              _vm.f_g_issued_price.toLocaleString() +
-                              ","
-                          )
-                        )
+                        _vm._v(_vm._s("Price : $" + _vm.f_g_issued_price + ","))
                       ])
                     ],
                     1

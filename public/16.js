@@ -328,7 +328,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\ntd[data-v-66b6656c] {\r\n  height: 0px !important;\r\n  border-top: solid 1px !important;\r\n  border-right: solid 1px !important;\n}\n.report-border[data-v-66b6656c] {\r\n  border: 0px !important;\r\n  border-top: solid 1px !important;\n}\n.starter-border[data-v-66b6656c] {\r\n  border: 0px !important;\r\n  border-right: solid 1px !important;\n}\n.border-all[data-v-66b6656c] {\r\n  border: solid 1px !important;\n}\n.no-right-border[data-v-66b6656c] {\r\n  border-right: 0px;\n}\nth[data-v-66b6656c] {\r\n  background-color: #7fffd4 !important;\n}\r\n", ""]);
+exports.push([module.i, "\ntd[data-v-66b6656c] {\n  height: 0px !important;\n  border-top: solid 1px !important;\n  border-right: solid 1px !important;\n}\n.report-border[data-v-66b6656c] {\n  border: 0px !important;\n  border-top: solid 1px !important;\n}\n.starter-border[data-v-66b6656c] {\n  border: 0px !important;\n  border-right: solid 1px !important;\n}\n.border-all[data-v-66b6656c] {\n  border: solid 1px !important;\n}\n.no-right-border[data-v-66b6656c] {\n  border-right: 0px;\n}\nth[data-v-66b6656c] {\n  background-color: #7fffd4 !important;\n}\n", ""]);
 
 // exports
 

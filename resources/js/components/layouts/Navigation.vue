@@ -43,7 +43,7 @@
         <v-expansion-panels v-model="sidebar_panel" focusable flat dense>
           <v-expansion-panel class="px-0 mt-0">
             <v-expansion-panel-header v-if="checkRole(['administrator', 'finished good manager'])">
-              <v-card-subtitle class="pa-0">SHOPS LIST</v-card-subtitle>
+              <v-card-subtitle class="pa-0">SITE LIST</v-card-subtitle>
             </v-expansion-panel-header>
             <v-expansion-panel-content
               v-if="checkRole(['administrator', 'finished good manager'])"
@@ -162,7 +162,7 @@ export default {
         },
         {
           roles: ["administrator", "finished good manager"],
-          title: "FINISHED GOOD",
+          title: "MAIN WAREHOUSE",
           links: [
             {
               action: "ADD NEW",
@@ -170,7 +170,7 @@ export default {
               link: "/add-finished-good"
             },
             {
-              action: "FINISHED GOOD LIST",
+              action: "WAREHOUSE PRODUCT LIST",
               icon: "store",
               link: "/finished-goods"
             },
@@ -219,7 +219,7 @@ export default {
         },
         {
           roles: ["administrator"],
-          title: "STORE",
+          title: "WAREHOUSE",
           links: [
             {
               action: "ADD NEW",
@@ -227,7 +227,7 @@ export default {
               link: "/add-store"
             },
             {
-              action: "STORE LIST",
+              action: "WAREHOUSE LIST",
               icon: "store",
               link: "/stores"
             }

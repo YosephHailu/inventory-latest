@@ -31,11 +31,11 @@ class FinishedGood extends Model
     
     public function fGReceiveDetail()
     {
-        return $this->hasMany('App\fGReceiveDetail');
+        return $this->hasMany('App\FGReceiveDetail');
     }
     
     public function fGIssueDetail()
     {
-        return $this->hasMany('App\fGIssueDetail');
+        return $this->hasMany('App\FGIssueDetail');
     }
 }

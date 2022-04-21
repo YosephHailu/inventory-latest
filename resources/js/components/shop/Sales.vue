@@ -4,7 +4,7 @@
       <v-spacer></v-spacer>
 
       <v-btn @click="dialog = !dialog" class="cyan white--text text-center">
-        <v-icon>add</v-icon>NEW SALE
+        <v-icon>add</v-icon>NEW CONSUMPTION
       </v-btn>
     </div>
 
@@ -145,17 +145,17 @@ export default {
       edit: false,
       headers: [
         {
-          text: "Sale id",
+          text: "CONSUMPTION ID",
           value: "sale_id",
           class: "cyan--text",
         },
         {
-          text: "Sold to",
+          text: "CONSUMED BY",
           value: "to",
           class: "cyan--text",
         },
         {
-          text: "Date",
+          text: "DATE",
           value: "date",
           class: "cyan--text",
         },

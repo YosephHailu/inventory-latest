@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Config;
-use App\shop;
+use App\Shop;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class shopController extends Controller
+class ShopController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class shopController extends Controller
     public function index(Request $request)
     {
         //
-        $shops = shop::All();
+        $shops = Shop::All();
         $config = Config::first();
 
         return response()->json([

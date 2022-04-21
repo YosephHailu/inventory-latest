@@ -20,20 +20,20 @@
 
           <v-list-item-content>
             <v-list-item-title>Balance : {{finished_good.balance}}</v-list-item-title>
-            <v-list-item-subtitle>{{`I.balance : ${finished_good.initial_balance.toLocaleString()},`}}</v-list-item-subtitle>
-            <v-list-item-subtitle>{{`Beginning balance : ${finished_good.beginning_balance.toLocaleString()},`}}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{`I.balance : ${finished_good.initial_balance},`}}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{`Beginning balance : ${finished_good.beginning_balance},`}}</v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-content class="text-center">
             <v-list-item-title>Received</v-list-item-title>
-            <v-list-item-subtitle>{{`Quantity : ${f_g_received_count.toLocaleString()},`}}</v-list-item-subtitle>
-            <v-list-item-subtitle>{{`Price : $${f_g_received_price.toLocaleString()},`}}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{`Quantity : ${f_g_received_count},`}}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{`Price : $${f_g_received_price},`}}</v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-content class="text-center">
             <v-list-item-title>Issued</v-list-item-title>
-            <v-list-item-subtitle>{{`Quantity : ${f_g_issued_count.toLocaleString()},`}}</v-list-item-subtitle>
-            <v-list-item-subtitle>{{`Price : $${f_g_issued_price.toLocaleString()},`}}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{`Quantity : ${f_g_issued_count},`}}</v-list-item-subtitle>
+            <v-list-item-subtitle>{{`Price : $${f_g_issued_price},`}}</v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-action class="ma-0 pa-0">
@@ -89,6 +89,7 @@ export default {
       axios
         .get("/api/finished_good/" + this.$route.params.id)
         .then(response => {
+          console.log(response);
           this.f_g_issued_count = response.data.f_g_issued_count;
           this.f_g_received_count = response.data.f_g_received_count;
           this.f_g_issued_price = response.data.f_g_issued_price;
@@ -96,7 +97,9 @@ export default {
 
           this.finished_good = response.data.finished_good;
         })
-        .catch(error => {});
+        .catch(error => {
+          console.log(error.response)
+        });
     }
   },
   watch: {},

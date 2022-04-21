@@ -220,7 +220,7 @@ export const routes = [
     {
         path: "/users",
         name: "users",
-        component: () => import("../components/user/Users"),
+        component: () => import("../components/user/users"),
         meta: {
             roles: ["administrator"],
             authenticated: true,

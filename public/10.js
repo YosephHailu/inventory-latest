@@ -534,15 +534,15 @@ __webpack_require__.r(__webpack_exports__);
       totalItems: 0,
       edit: false,
       headers: [{
-        text: "Sale id",
+        text: "CONSUMPTION ID",
         value: "sale_id",
         "class": "cyan--text"
       }, {
-        text: "Sold to",
+        text: "CONSUMED BY",
         value: "to",
         "class": "cyan--text"
       }, {
-        text: "Date",
+        text: "DATE",
         value: "date",
         "class": "cyan--text"
       }, {
@@ -1778,7 +1778,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\ntd[data-v-52b597bf] {\r\n  height: 0px !important;\r\n  border-top: solid 1px !important;\r\n  border-right: solid 1px !important;\n}\n.report-border[data-v-52b597bf] {\r\n  border: 0px !important;\r\n  border-top: solid 1px !important;\n}\n.starter-border[data-v-52b597bf] {\r\n  border: 0px !important;\r\n  border-right: solid 1px !important;\n}\n.border-all[data-v-52b597bf] {\r\n  border: solid 1px !important;\n}\n.no-right-border[data-v-52b597bf] {\r\n  border-right: 0px;\n}\nth[data-v-52b597bf] {\r\n  background-color: #7fffd4 !important;\n}\r\n", ""]);
+exports.push([module.i, "\ntd[data-v-52b597bf] {\n  height: 0px !important;\n  border-top: solid 1px !important;\n  border-right: solid 1px !important;\n}\n.report-border[data-v-52b597bf] {\n  border: 0px !important;\n  border-top: solid 1px !important;\n}\n.starter-border[data-v-52b597bf] {\n  border: 0px !important;\n  border-right: solid 1px !important;\n}\n.border-all[data-v-52b597bf] {\n  border: solid 1px !important;\n}\n.no-right-border[data-v-52b597bf] {\n  border-right: 0px;\n}\nth[data-v-52b597bf] {\n  background-color: #7fffd4 !important;\n}\n", ""]);
 
 // exports
 
@@ -1797,7 +1797,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\ntd[data-v-286a3b1c] {\r\n  height: 0px !important;\r\n  border-top: solid 1px !important;\r\n  border-right: solid 1px !important;\n}\n.starter-border[data-v-286a3b1c] {\r\n  border: 0px !important;\r\n  border-right: solid 1px !important;\n}\n.border-all[data-v-286a3b1c] {\r\n  border: solid 1px !important;\n}\n.no-right-border[data-v-286a3b1c] {\r\n  border-right: 0px;\n}\n.no-border[data-v-286a3b1c] {\r\n  border: 0px !important;\n}\nth[data-v-286a3b1c] {\r\n  background-color: #7fffd4 !important;\n}\r\n", ""]);
+exports.push([module.i, "\ntd[data-v-286a3b1c] {\n  height: 0px !important;\n  border-top: solid 1px !important;\n  border-right: solid 1px !important;\n}\n.starter-border[data-v-286a3b1c] {\n  border: 0px !important;\n  border-right: solid 1px !important;\n}\n.border-all[data-v-286a3b1c] {\n  border: solid 1px !important;\n}\n.no-right-border[data-v-286a3b1c] {\n  border-right: 0px;\n}\n.no-border[data-v-286a3b1c] {\n  border: 0px !important;\n}\nth[data-v-286a3b1c] {\n  background-color: #7fffd4 !important;\n}\n", ""]);
 
 // exports
 
@@ -1816,7 +1816,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\ntd[data-v-238f8537] {\r\n  height: 0px !important;\r\n  border-top: solid 1px !important;\r\n  border-right: solid 1px !important;\n}\n.starter-border[data-v-238f8537] {\r\n  border: 0px !important;\r\n  border-right: solid 1px !important;\n}\n.border-all[data-v-238f8537] {\r\n  border: solid 1px !important;\n}\n.no-right-border[data-v-238f8537] {\r\n  border-right: 0px;\n}\n.no-border[data-v-238f8537] {\r\n  border: 0px !important;\n}\nth[data-v-238f8537] {\r\n  background-color: #7fffd4 !important;\n}\r\n", ""]);
+exports.push([module.i, "\ntd[data-v-238f8537] {\n  height: 0px !important;\n  border-top: solid 1px !important;\n  border-right: solid 1px !important;\n}\n.starter-border[data-v-238f8537] {\n  border: 0px !important;\n  border-right: solid 1px !important;\n}\n.border-all[data-v-238f8537] {\n  border: solid 1px !important;\n}\n.no-right-border[data-v-238f8537] {\n  border-right: 0px;\n}\n.no-border[data-v-238f8537] {\n  border: 0px !important;\n}\nth[data-v-238f8537] {\n  background-color: #7fffd4 !important;\n}\n", ""]);
 
 // exports
 
@@ -1835,7 +1835,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\ntd[data-v-fa4846ce] {\r\n  height: 0px !important;\r\n  border-top: solid 1px !important;\r\n  border-right: solid 1px !important;\n}\n.starter-border[data-v-fa4846ce] {\r\n  border: 0px !important;\r\n  border-right: solid 1px !important;\n}\n.border-all[data-v-fa4846ce] {\r\n  border: solid 1px !important;\n}\n.no-right-border[data-v-fa4846ce] {\r\n  border-right: 0px;\n}\nth[data-v-fa4846ce] {\r\n  background-color: #7fffd4 !important;\n}\r\n", ""]);
+exports.push([module.i, "\ntd[data-v-fa4846ce] {\n  height: 0px !important;\n  border-top: solid 1px !important;\n  border-right: solid 1px !important;\n}\n.starter-border[data-v-fa4846ce] {\n  border: 0px !important;\n  border-right: solid 1px !important;\n}\n.border-all[data-v-fa4846ce] {\n  border: solid 1px !important;\n}\n.no-right-border[data-v-fa4846ce] {\n  border-right: 0px;\n}\nth[data-v-fa4846ce] {\n  background-color: #7fffd4 !important;\n}\n", ""]);
 
 // exports
 
@@ -2658,7 +2658,7 @@ var render = function() {
                 }
               }
             },
-            [_c("v-icon", [_vm._v("add")]), _vm._v("NEW SALE\n    ")],
+            [_c("v-icon", [_vm._v("add")]), _vm._v("NEW CONSUMPTION\n    ")],
             1
           )
         ],
@@ -4124,7 +4124,7 @@ var render = function() {
             [
               _c("v-tabs-slider"),
               _vm._v(" "),
-              _c("v-tab", [_vm._v("SALES")]),
+              _c("v-tab", [_vm._v("CONSUMPTION")]),
               _vm._v(" "),
               _c("v-tab", [_vm._v("STORE")]),
               _vm._v(" "),
@@ -4132,9 +4132,9 @@ var render = function() {
               _vm._v(" "),
               _c("v-tab", [_vm._v("RETURNED")]),
               _vm._v(" "),
-              _c("v-tab", [_vm._v("SALES REPORT")]),
+              _c("v-tab", [_vm._v("CONSUMPTION REPORT")]),
               _vm._v(" "),
-              _c("v-tab", [_vm._v("SALES REPORT BY DATE")])
+              _c("v-tab", [_vm._v("CONSUMPTION REPORT BY DATE")])
             ],
             1
           ),

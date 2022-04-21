@@ -45,13 +45,13 @@ class DashboardController extends Controller
         $gregorian = new DateTime();
 
         // just pass it to Andegna\DateTime constractor and you will get $ethiopian date
-        $ethipic = new \Andegna\DateTime($gregorian);
+        // $ethipic = new \Andegna\DateTime($gregorian);
 
-        $date = explode('-', $ethipic->format("d-m-Y"));
+        // $date = explode('-', $ethipic->format("d-m-Y"));
 
         return response()->json([
-            'current_date' => $ethipic->format(DATE_COOKIE),
-            'date' => $date,
+            'current_date' => Carbon::now(), // $ethipic->format(DATE_COOKIE),
+            'date' => Carbon::now(), // $date,
             'company' => $company,
         ]);
     }

@@ -64,12 +64,12 @@
       <v-tabs centered v-model="tab">
         <v-tabs-slider></v-tabs-slider>
 
-        <v-tab>SALES</v-tab>
+        <v-tab>CONSUMPTION</v-tab>
         <v-tab>STORE</v-tab>
         <v-tab>RECEIVED</v-tab>
         <v-tab>RETURNED</v-tab>
-        <v-tab>SALES REPORT</v-tab>
-        <v-tab>SALES REPORT BY DATE</v-tab>
+        <v-tab>CONSUMPTION REPORT</v-tab>
+        <v-tab>CONSUMPTION REPORT BY DATE</v-tab>
       </v-tabs>
 
       <v-tabs-items v-model="tab" class="px-0">

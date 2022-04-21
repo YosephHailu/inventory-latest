@@ -2393,13 +2393,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }]
       }, {
         roles: ["administrator", "finished good manager"],
-        title: "FINISHED GOOD",
+        title: "MAIN WAREHOUSE",
         links: [{
           action: "ADD NEW",
           icon: "plus_one",
           link: "/add-finished-good"
         }, {
-          action: "FINISHED GOOD LIST",
+          action: "WAREHOUSE PRODUCT LIST",
           icon: "store",
           link: "/finished-goods"
         }, {
@@ -2437,13 +2437,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }]
       }, {
         roles: ["administrator"],
-        title: "STORE",
+        title: "WAREHOUSE",
         links: [{
           action: "ADD NEW",
           icon: "plus_one",
           link: "/add-store"
         }, {
-          action: "STORE LIST",
+          action: "WAREHOUSE LIST",
           icon: "store",
           link: "/stores"
         }]
@@ -7029,7 +7029,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.v-expansion-panel-content__wrap {\r\n  padding: 0px !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.v-expansion-panel-content__wrap {\n  padding: 0px !important;\n}\n", ""]);
 
 // exports
 
@@ -39346,7 +39346,7 @@ var render = function() {
                                   _c(
                                     "v-card-subtitle",
                                     { staticClass: "pa-0" },
-                                    [_vm._v("SHOPS LIST")]
+                                    [_vm._v("SITE LIST")]
                                   )
                                 ],
                                 1
@@ -98319,7 +98319,8 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
+ * building robust, powerful web   applications using Vue and laravel.
+
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
@@ -98944,7 +98945,7 @@ var routes = [{
   path: "/sections",
   name: "sections",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 46).then(__webpack_require__.bind(null, /*! ../components/section/Section */ "./resources/js/components/section/Section.vue"));
+    return __webpack_require__.e(/*! import() */ 45).then(__webpack_require__.bind(null, /*! ../components/section/Section */ "./resources/js/components/section/Section.vue"));
   },
   meta: {
     roles: ["administrator"],
@@ -98959,7 +98960,7 @@ var routes = [{
   path: "/stores",
   name: "stores",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 48).then(__webpack_require__.bind(null, /*! ../components/store/Stores */ "./resources/js/components/store/Stores.vue"));
+    return __webpack_require__.e(/*! import() */ 47).then(__webpack_require__.bind(null, /*! ../components/store/Stores */ "./resources/js/components/store/Stores.vue"));
   },
   meta: {
     roles: ["administrator"],
@@ -99152,7 +99153,7 @@ var routes = [{
   path: "/users",
   name: "users",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 49).then(__webpack_require__.bind(null, /*! ../components/user/Users */ "./resources/js/components/user/Users.vue"));
+    return __webpack_require__.e(/*! import() */ 48).then(__webpack_require__.bind(null, /*! ../components/user/users */ "./resources/js/components/user/users.vue"));
   },
   meta: {
     roles: ["administrator"],
@@ -99202,7 +99203,7 @@ var routes = [{
   path: "/items",
   name: "items",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 42).then(__webpack_require__.bind(null, /*! ../components/item/Items */ "./resources/js/components/item/Items.vue"));
+    return __webpack_require__.e(/*! import() */ 41).then(__webpack_require__.bind(null, /*! ../components/item/Items */ "./resources/js/components/item/Items.vue"));
   },
   meta: {
     authenticated: true,
@@ -99216,7 +99217,7 @@ var routes = [{
   path: "/mange-item-balance",
   name: "manage-item-balance",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 43).then(__webpack_require__.bind(null, /*! ../components/item/ManageBalance */ "./resources/js/components/item/ManageBalance.vue"));
+    return __webpack_require__.e(/*! import() */ 42).then(__webpack_require__.bind(null, /*! ../components/item/ManageBalance */ "./resources/js/components/item/ManageBalance.vue"));
   },
   meta: {
     roles: ["administrator"],
@@ -99390,7 +99391,7 @@ var routes = [{
   path: "/issue-goods",
   name: "issue-goods",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 40).then(__webpack_require__.bind(null, /*! ../components/issue_good/GoodIssues */ "./resources/js/components/issue_good/GoodIssues.vue"));
+    return __webpack_require__.e(/*! import() */ 39).then(__webpack_require__.bind(null, /*! ../components/issue_good/GoodIssues */ "./resources/js/components/issue_good/GoodIssues.vue"));
   },
   meta: {
     roles: ["raw material manager"],
@@ -99453,7 +99454,7 @@ var routes = [{
   path: "/issue-good/:id/manage",
   name: "manage-issue-good",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 41).then(__webpack_require__.bind(null, /*! ../components/issue_good/ManageIssueGood */ "./resources/js/components/issue_good/ManageIssueGood.vue"));
+    return __webpack_require__.e(/*! import() */ 40).then(__webpack_require__.bind(null, /*! ../components/issue_good/ManageIssueGood */ "./resources/js/components/issue_good/ManageIssueGood.vue"));
   },
   meta: {
     roles: ["raw material manager"],
@@ -99730,7 +99731,7 @@ var routes = [{
   path: "/issue-finished-good/:id/manage",
   name: "manage-issue-finished-good",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 39).then(__webpack_require__.bind(null, /*! ../components/issue_finished_good/ManageIssueFinishedGood */ "./resources/js/components/issue_finished_good/ManageIssueFinishedGood.vue"));
+    return __webpack_require__.e(/*! import() */ 49).then(__webpack_require__.bind(null, /*! ../components/issue_finished_good/ManageIssueFinishedGood */ "./resources/js/components/issue_finished_good/ManageIssueFinishedGood.vue"));
   },
   meta: {
     roles: ["finished good manager"],
@@ -99766,7 +99767,7 @@ var routes = [{
   path: "/sale-finished-good/:id/manage",
   name: "sale-finished-good",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 45).then(__webpack_require__.bind(null, /*! ../components/sale_finished_good/ManageSaleGood */ "./resources/js/components/sale_finished_good/ManageSaleGood.vue"));
+    return __webpack_require__.e(/*! import() */ 44).then(__webpack_require__.bind(null, /*! ../components/sale_finished_good/ManageSaleGood */ "./resources/js/components/sale_finished_good/ManageSaleGood.vue"));
   },
   meta: {
     roles: ["finished good manager"],
@@ -99784,7 +99785,7 @@ var routes = [{
   path: "/return-finished-good/:id/manage",
   name: "return-finished-good",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 44).then(__webpack_require__.bind(null, /*! ../components/return_finished_good/ManageReturnGood */ "./resources/js/components/return_finished_good/ManageReturnGood.vue"));
+    return __webpack_require__.e(/*! import() */ 43).then(__webpack_require__.bind(null, /*! ../components/return_finished_good/ManageReturnGood */ "./resources/js/components/return_finished_good/ManageReturnGood.vue"));
   },
   meta: {
     roles: ["finished good manager"],
@@ -99803,7 +99804,7 @@ var routes = [{
   path: "/shops",
   name: "shops",
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 47).then(__webpack_require__.bind(null, /*! ../components/shop/shops */ "./resources/js/components/shop/shops.vue"));
+    return __webpack_require__.e(/*! import() */ 46).then(__webpack_require__.bind(null, /*! ../components/shop/shops */ "./resources/js/components/shop/shops.vue"));
   },
   meta: {
     roles: ["finished good manager"],
@@ -99957,8 +99958,8 @@ var opts = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\inv\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\inv\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/dayone/Documents/project72/inventory/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/dayone/Documents/project72/inventory/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
